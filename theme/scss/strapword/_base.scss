@@ -1,0 +1,285 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+::-moz-selection {
+    color: $primary!important;
+    background: rgba($secondary, 1);
+}
+::selection {
+    color: $primary!important;
+    background: rgba($secondary, .996);
+}
+img::selection {
+    color: $primary!important;
+    background: rgba($secondary, .8);
+}
+
+/*==============================
+=            Mixins            =
+==============================*/
+@mixin overlay($opacity, $background) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    content: "";
+    transition: opacity .4s ease;
+
+    opacity: $opacity;
+    background: $background;
+}
+
+.overlay {
+    &,
+    &-5,
+    &-8 {
+        position: relative;
+
+        overflow: hidden;
+    }
+
+    &:before {
+        @include overlay(.3, $dark);
+    }
+
+    &-5:before {
+        @include overlay(.5, $dark);
+    }
+
+    &-8:before {
+        @include overlay(.8, $dark);
+    }
+
+    .container,
+    .container-fuid {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.overlay-light {
+    &:before {
+        background-color: $light !important;
+        //mix-blend-mode: multiply;
+    }
+}
+
+/* =============================== */
+/*       Hide reCaptcha badge      */
+/* =============================== */
+.grecaptcha-badge {
+    display: none;
+}
+
+/* =============================== */
+/*             Rounded             */
+/* =============================== */
+.rounded-10 {
+    border-radius: 10px;
+}
+
+.rounded-20 {
+    border-radius: 20px;
+}
+
+.rounded-30 {
+    border-radius: 30px;
+}
+
+/* =============================== */
+/*             Buttons             */
+/* =============================== */
+.btn-comic {
+    transition: all ease .12s;
+
+    //background: $secondary!important;
+    border: 2px solid transparent;
+    border-color: black;
+    border-top: 2px solid #000;
+    border-right: 5px solid #000;
+    border-bottom: 5px solid #000;
+    border-left: 2px solid #000;
+    border-radius: 3px;
+
+    &:active,
+    &:focus {
+        box-shadow: none!important;
+    }
+
+    &:hover {
+        border-top: 2px solid #000;
+        border-right: 5px solid #000;
+        border-bottom: 5px solid #000;
+        border-left: 2px solid #000;
+    }
+
+    &:focus,
+    &:active {
+        //background: $secondary!important;
+        border-color: black !important;
+        border-top-width: 5px;
+        border-right-width: 2px;
+        border-bottom-width: 2px;
+        border-left-width: 5px;
+    }
+}
+
+/* =============================== */
+/*           Backgrounds           */
+/* =============================== */
+
+.img-featured {
+    position: relative;
+    //display: flex;
+    //width: 100%;
+
+    overflow: hidden;
+
+    img.img-fundo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        //z-index: -1;
+
+        width: 100%;
+        height: auto;
+        min-height: -webkit-fill-available;
+        //margin: auto;
+
+        align-self: flex-start;
+        object-fit: cover;
+    }
+}
+
+.bg-v1 {
+    background: url("../img/wallpaper-2_1920.webp") center center;
+}
+
+.bg-cut {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        display: block;
+        width: 100%;
+        height: 50%;
+
+        content: "";
+
+        background: rgba($primary, .2);
+    }
+
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+        width: 100%;
+        height: 50%;
+
+        content: "";
+
+        background: rgba($secondary, .2);
+    }
+}
+
+/*====================================
+=            Icons button            =
+====================================*/
+/* Icon Foward */
+.icon-foward {
+    //display: inline-block;
+    transition-duration: .1s;
+    //transform: perspective(1px) translateZ(0);
+    vertical-align: middle;
+
+    i {
+        display: inline-block;
+
+        transition-timing-function: ease-out;
+        transition-duration: .1s;
+        transition-property: transform;
+        transform: translateZ(0);
+
+        // &.fa-as {
+        //     font-family: 'Roboto Condensed'!important;
+        // }
+    }
+
+    &:hover i,
+    &:focus i,
+    &:active i {
+        transform: translateX(4px);
+    }
+}
+
+/* =============================== */
+/*            Animations           */
+/* =============================== */
+@keyframes float {
+    0% {
+        //box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
+    50% {
+        //box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+        transform: translatey(-10px);
+    }
+    100% {
+        //box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
+}
+
+/* =============================== */
+/*          Media Queries          */
+/* =============================== */
+
+/* --------- From Tablet --------- */
+
+@media screen and (min-width: 768px) {
+
+
+.bg-cut {
+    position: relative;
+
+    &:before {
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+    }
+
+    &:after {
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+    }
+}
+}
+
+/* -------- From small PC -------- */
+
+//@media screen and (min-width: 992px) {}
+
+/* -------- From large PC -------- */
+
+//@media screen and (min-width: 1200px) {}

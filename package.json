@@ -1,0 +1,16 @@
+{
+  "name": "Strapword",
+  "version": "1.0.0",
+  "description": "Wordpress theme, Bootstrap 5 and stuff. Based in b5st.",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --watch --style=compressed theme/scss/strapword.scss theme/css/strapword.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diego Gelvez & Nicolás Galdo",
+  "license": "GPL version 3",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.50.0"
+  }
+}

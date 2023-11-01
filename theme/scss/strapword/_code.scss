@@ -1,0 +1,41 @@
+/* ============================= */
+/*           Menu Redes          */
+/* ============================= */
+#menu-redes {
+    display: block;
+    padding-left: 0;
+
+    list-style: none;
+
+    .list-inline-item {
+        display: inline-block;
+
+        .nav-link {
+            padding: 0 .3rem 0 0;
+
+            font-size: 1.2em;
+
+            color: $primary;
+
+            &:last-of-type {
+                padding: 0;
+            }
+        }
+    }
+}
+
+/* =============================== */
+/*          Media Queries          */
+/* =============================== */
+
+/* --------- From Tablet --------- */
+
+//@media screen and (min-width: 768px) {}
+
+/* -------- From small PC -------- */
+
+//@media screen and (min-width: 992px) {}
+
+/* -------- From large PC -------- */
+
+//@media screen and (min-width: 1200px) {}

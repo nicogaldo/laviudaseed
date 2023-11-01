@@ -1,0 +1,130 @@
+/*=====================================
+=            Mis variables            =
+=====================================*/
+
+
+// Create your own map
+$custom-colors: (
+    "light-gray": #f8f8f8
+);
+
+$colors: (
+   "blue":       #3330E4,
+   "purple":     #6a1b9a,
+   "red":        #ff1700,
+   "orange":     #FF8E00,
+   "yellow":     #FFE400,
+   "green":      #00d950,
+   //"green":      #00ec2c,
+);
+
+//colors
+$primary: #6a1b9a;
+$primary-light: #ce7cff;
+$secondary: #00d950;
+//$secondary: #00ec2c;
+$success: #00b141;
+$light: #e3e3e3;
+$light-20: rgba($light, .2);
+$dark: #121212;
+$dark-50: rgba($dark, .5);
+
+//navbar 
+//$navbar-dark-color:                 white;
+//$navbar-dark-hover-color:           $secondary;
+//$navbar-dark-active-color:          $secondary;
+//$navbar-dark-disabled-color:        rgba(white, .25);
+
+//$navbar-light-color:                 gray;
+//$navbar-light-hover-color:           $secondary;
+//$navbar-light-active-color:          $secondary;
+//$navbar-light-disabled-color:        rgba(gray, .25);
+
+//typography
+$font-size-base: 1rem;
+//$font-family-sans-serif: 'Lato';
+$enable-responsive-font-sizes: true;
+$enable-negative-margins: true;
+
+//buttons
+//$btn-padding-y: .5em;
+//$btn-padding-x: 2em;
+//$btn-font-size: 1.1em;
+//$btn-font-family: 'Montserrat';
+//$btn-border-radius: 30px;
+//$btn-font-weight: bold;
+//$btn-border-width: 2px;
+$btn-focus-box-shadow: none;
+
+//$btn-hover-bg-shade-amount: 20%;
+//$btn-hover-bg-tint-amount: 20%;
+//$btn-hover-border-shade-amount: 0%;
+//$btn-hover-border-tint-amount: 0%;
+
+
+//form control
+$input-font-weight: 500;
+// $input-padding-y: .5em;
+// $input-padding-x: 1em;
+// $input-font-size: 1.3em;
+// $input-line-height: 1.2;
+$input-bg: transparent;
+$input-color: $secondary;
+$input-border-color: gray;
+$input-border-width: 1px;
+//$input-border-radius: 0px;
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
+$input-focus-border-color: $secondary;
+$input-focus-color: $secondary;
+
+$input-placeholder-color: rgba(gray, .6);
+
+$input-disabled-color: $primary;
+$input-disabled-bg: transparent;
+$input-disabled-border-color: rgba(gray, .6);;
+
+//form floating label
+//$form-floating-height:            add(4.5rem, 2px);
+//$form-floating-line-height:       1.25;
+//$form-floating-padding-x:         1.2em;
+//$form-floating-padding-y:         1rem;
+//$form-floating-input-padding-t:   1.625rem;
+//$form-floating-input-padding-b:   .625rem;
+//$form-floating-label-opacity:     .9;
+//$form-floating-label-transform:   scale(.85) translateY(-.5rem) translateX(.15rem);
+//$form-floating-transition:        opacity .1s ease-in-out, transform .1s ease-in-out;
+
+//cards
+//$card-height: 480px;
+//$card-border-radius: 30px; //50pt
+//$card-border-width: 0;
+//$card-img-overlay-padding: 45px;
+
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6,
+);
+
+/* =============================== */
+/*          Media Queries          */
+/* =============================== */
+
+/* --------- From Tablet --------- */
+
+//@media screen and (min-width: 768px) {}
+
+/* -------- From small PC -------- */
+
+//@media screen and (min-width: 992px) {}
+
+/* -------- From large PC -------- */
+
+//@media screen and (min-width: 1200px) {}

@@ -1,0 +1,115 @@
+body.buddypress,
+body.page-template-page-login {
+
+    /* =============================== */
+    /*             Defaults            */
+    /* =============================== */
+    color: #ccc;
+    background-color: $dark;
+
+    /* ------------ navbar ----------- */
+    #navbar-wrapper, #site-navbar {
+        background-color: $dark!important;
+    }
+
+    .bp-feedback a,
+    .avatar-nav-items a,
+    .wppb-visibility-toggle-link {
+        color: $primary-light;
+    }
+
+    /* ------------ Forms ------------ */
+    .select2 {
+
+        //width: 420px!important;
+        //float: right;
+
+        .select2-selection {
+            @extend .form-control;
+            padding-top: 0;
+
+            .select2-selection__rendered {
+                color: $primary-light;
+            }
+        }
+    }
+
+    .select2-container { 
+        .select2-results__option {
+            background-color: $dark;
+            color: white;
+
+            &:hover {
+                background-color: $primary;
+            }
+        }
+    }
+    
+    input[type=radio], input[type=checkbox] {
+        border: 1px solid rgba(255,255,255,.25)!important;
+    }
+
+    /* =============================== */
+    /*         BP info messages        */
+    /* =============================== */
+    .bp-feedback {  
+        background: transparent!important;
+        color: white!important;
+        border-radius: .3em;
+        border: 1px solid rgba(gray, .6);
+    }
+
+}
+
+/* =============================== */
+/*            Avisos tab           */
+/* =============================== */
+#notifications-user-list {
+    
+    .bp-tables-user {
+
+        @extend .table, .table-dark;
+        tbody {
+            tr {
+                
+            }
+        }
+    }
+    .select-wrap {
+        border: none;
+        box-shadow: none!important;
+
+        #notification-select {
+            @extend .form-control;
+    
+            width: 200px;
+            margin-right: 1em;
+        }
+
+        .select-arrow {
+            display: none;
+        }
+    }
+}
+
+/* =============================== */
+/*           BP Comments           */
+/* =============================== */
+.comments-wrap {
+    a:not(.btn) {
+        color: $primary-light;
+    }
+
+    .reply {
+        .btn-reply {
+            color: #666;
+            font-size: 0.8em;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $secondary;
+            }
+
+        }
+    }
+}

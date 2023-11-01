@@ -1,0 +1,377 @@
+/* =============================== */
+/*    Hide mi account menu link    */
+/* =============================== */
+.logged-in .menu-mi-perfil {
+    display: block;
+}
+
+.menu-mi-perfil {
+    display: none;
+}
+
+/* ==================================== */
+/*           Mobile offcanvas           */
+/* ==================================== */
+.offcanvas {
+    max-width: 75vw;
+}
+
+.offcanvas-comments {
+    width: 510px!important;
+    max-width: 75vw;
+}
+
+/* =============================== */
+/*            Navbar Top           */
+/* =============================== */
+
+#top-navbar {    
+    
+    position: relative;
+    //z-index: 1039;
+
+    .navbar-nav {
+        .nav-item {     
+
+            &.bp-register-nav .nav-link {
+                //background: $light;
+                color: $secondary;
+            }
+
+            &.bp-login-nav .nav-link {
+                //background: $secondary;
+                //color: $primary;
+
+            }
+
+            .dropdown-menu {
+                display: block;
+                padding: 0;
+                right: 0;
+                //text-transform: uppercase;
+
+                //border-radius: 0;
+
+                .nav-item {
+
+                    .dropdown-item {
+                        padding: .25em 1em;
+                        margin: .25em 0;
+
+                        &:last-of-type,
+                        &:first-of-type {
+                            margin: 0;
+                        }
+                    }
+
+                    
+
+                    &.active,
+                    &:hover {
+                        background: rgba($primary, .5);
+
+                        .dropdown-item {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
+
+/* ============================= */
+/*            Nav Bar            */
+/* ============================= */
+#navbar-wrapper {
+    //z-index: 1030;
+    background-color: $primary;
+
+    height: 90px;
+    //margin-bottom: -90px; // for nav transparent, add bg-transparent class in <nav>
+}
+
+#site-navbar {
+    //overflow: hidden;
+    height: 90px;
+    transition: all .42s ease;
+
+    .navbar-brand {
+        position: relative;
+
+        display: flex;
+
+        align-items: center;
+
+        img {
+            z-index: 2;
+
+            max-width: 200px;
+            max-height: 64px;
+
+            image-rendering: -webkit-optimize-contrast;
+        }
+    }
+
+    &.fixed-top {
+        height: 60px;
+        background-color: $primary; //change color in fixed navbar
+    }
+
+    /* =============================== */
+    /*               Cart              */
+    /* =============================== */
+    .nav-item-4200 {
+        
+        //margin-right: 1rem!important;
+
+        img {
+            display: inline-block;
+            width: 24px;
+        }
+
+        &.active,
+        &:hover {
+            .nav-link i,
+            .nav-link object,
+            .nav-link span {
+                fill: white!important;
+                color: white!important;
+            }
+        }
+
+        .cart-count {
+            background-color: $secondary;
+            border-radius: 50%;;
+            width: 1.3rem;
+            height: 1.3rem;
+            padding: .25rem;
+            line-height: 1;
+            display: inline-flex;
+            position: relative;
+            font-size: 11px;
+            font-weight: 500;
+            top: -.5rem;
+            left: -.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .navbar-nav {
+        .nav-item {
+            padding: 1rem;
+            margin-right: .5rem;
+
+            .nav-link {
+                position: relative;
+
+                padding: 0;
+
+                font-size: 1em;
+                font-weight: 500;
+
+                letter-spacing: 1px;
+                text-transform: uppercase;
+
+                color: white;
+
+                &:after {
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+
+                    width: 0;
+                    height: 2px;
+
+                    font-size: 1em;
+
+                    content: "";
+                    transition: width ease .4s;
+
+                    border: none !important;
+                    background: white;
+                }
+            }
+
+            &.active,
+            &.current-menu-parent,
+            &.current-category-ancestor {
+                .nav-link {
+                    color: $secondary!important;
+                }
+
+                .nav-link:after {
+                    width: 75%;
+
+                    background: $secondary!important;
+                }
+            }
+
+            &:hover {
+                .nav-link {
+                    color: $secondary;
+
+                    &::after {
+                        width: 100%;
+
+                        background: $secondary;
+                    }
+                }
+            }
+
+            .dropdown-menu {
+                display: block;
+                width: 300px;
+                padding: 10px 0;
+                //text-transform: uppercase;
+
+                border-radius: 0;
+
+                .nav-item {
+                    padding: 0 .15em;
+                    margin: 0;
+
+                    .dropdown-item {
+                        position: relative;
+
+                        padding-top: .5rem;
+
+                        font-size: .8em;
+                        font-weight: 400;
+
+                        white-space: normal;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+
+                        &:after {
+                            position: absolute;
+                            right: 15px;
+                            bottom: 0;
+
+                            width: 0;
+                            height: 2px;
+
+                            font-size: .9em;
+
+                            content: "";
+                            transition: width ease .4s;
+
+                            border: none!important;
+                            background: $secondary;
+                        }
+                    }
+
+                    &:hover,
+                    &.active {
+                        .dropdown-item {
+                            color: $secondary;
+                            background: transparent;
+
+                            &:after {
+                                width: 33%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-collapse {
+        padding: 1em 0;
+    }
+}
+
+/* =============================== */
+/*          Media Queries          */
+/* =============================== */
+
+/* --------- From Tablet --------- */
+
+@media screen and (min-width: 768px) {
+    #site-navbar {
+        .navbar-brand {
+            &:before {
+                left: -720px;
+            }
+        }
+        .nav-link{
+            font-weight: 400!important;
+        }
+    }
+
+    .navbar {
+        .nav-item {
+            .dropdown-menu {
+                top: 100%;
+
+                display: block;
+                visibility: hidden;
+                //padding-bottom: 0;
+                margin-top: 0;
+
+                transition: .3s;
+
+                opacity: 0;
+                background: $light;
+
+                &.fade-down {
+                    top: 80%;
+
+                    transform: rotateX(-75deg);
+                    transform-origin: 0 0;
+                }
+
+                .nav-item {
+                    margin-right: 0;
+
+                    .dropdown-item {
+                        padding: 0 .5em;
+                        &:after {
+                            right: 0;
+                            bottom: -2.5px!important;
+                            left: 10px;
+                        }
+                    }
+                    /* &:hover {
+                        .dropdown-item {
+                            color: $primary;
+                        }
+                    }*/
+                }
+            }
+
+            &:hover {
+                .dropdown-menu {
+                    top: 100%;
+
+                    visibility: visible;
+
+                    transition: .3s;
+                    transform: rotateX(0deg);
+
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/* -------- From small PC -------- */
+//@media screen and (min-width: 992px) {}
+
+/* -------- From large PC -------- */
+@media screen and (min-width: 1200px) {
+    #site-navbar {
+        .navbar-nav {
+            .nav-item {
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+/*=====================================
+=            Mi Tipografia            =
+=====================================*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Ubuntu:wght@400;700&display=swap");
+
+/* ============================= */
+/*             Resets            */
+/* ============================= */
+* {
+    font-family: "Roboto Mono", monospace;
+}
+
+a {
+    text-decoration: none;
+
+    color: $primary;
+}
+
+.fw-medium {
+    font-weight: 500 !important;
+}
+
+/* .lh-1 {
+   line-height: .85!important;
+ } */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+
+    & > *:not(i) {
+        font-family: "Ubuntu", sans-serif;
+    }
+}
+
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+/*===================================
+ =            Formularios            =
+ ===================================*/
+.form-control {
+
+    &::placeholder {
+        font-weight: 300;
+        //text-transform: uppercase;
+        //color: $gray-600;
+    }
+
+}
+
+.wpcf7-not-valid-tip {
+    width: max-content;
+    padding: 5px 0 0 5px;
+    margin-top: 5px;
+
+    color: $red;
+    border-bottom: 1px solid $red;
+    border-left: 1px solid $red;
+    border-radius: 0 0 0 10px;
+}
+
+.wpcf7-form-control-wrap {
+    display: block;
+    margin-bottom: .5em;
+}
+
+.wpcf7 .ajax-loader {
+    margin: 5px 20px!important;
+}
+
+.wpcf7-response-output {
+    padding: 10px 10px 5px!important;
+
+    border-radius: 5px;
+    background: lightgrey;
+}
+
+.wpcf7-form {
+    position: relative;
+
+    .btn-submit {
+        display: block;
+        padding: 5px 30px;
+        margin: 0 auto;
+
+        text-transform: uppercase;
+
+        color: white;
+        border-radius: 30px;
+        background: $primary;
+    }
+}
+.wpcf7-spinner {
+    position: absolute;
+    bottom: 6px;
+    left: calc(50% - 12px);
+
+    margin: 0;
+}
+
+.wpcf7-form.submitting {
+    .btn-submit {
+        color: $primary;
+    }
+}
+
+/* =============================== */
+/*          Media Queries          */
+/* =============================== */
+
+/* --------- From Tablet --------- */
+//@media screen and (min-width: 768px) {}
+
+/* -------- From small PC -------- */
+//@media screen and (min-width: 992px) {}
+
+/* -------- From large PC -------- */
+//@media screen and (min-width: 1200px) {}

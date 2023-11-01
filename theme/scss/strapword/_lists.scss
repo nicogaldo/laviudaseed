@@ -1,0 +1,29 @@
+/* =============================== */
+/*          Media Queries          */
+/* =============================== */
+
+/* --------- From Tablet --------- */
+@media only screen and (min-width: 768px) {
+    /* =============================== */
+    /*           List Columns          */
+    /* =============================== */
+    .list-col-2 {
+        -webkit-columns: 2;
+           -moz-columns: 2;
+                columns: 2;
+    }
+
+    .list-col-3 {
+        -webkit-columns: 3;
+           -moz-columns: 3;
+                columns: 3;
+    }
+}
+
+/* -------- From small PC -------- */
+
+//@media screen and (min-width: 992px) {}
+
+/* -------- From large PC -------- */
+
+//@media screen and (min-width: 1200px) {}

@@ -1,0 +1,97 @@
+/* =============================== */
+/*            Post Card            */
+/* =============================== */
+.post-card {
+    position: relative;
+    z-index: 1;
+
+    height: 240px;
+    padding: calc(67px / 2);
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    &:before {
+        @include overlay(.5, $dark);
+        //z-index: -1;
+    }
+
+    &:hover {
+        .post-card-img {
+            transform: scale(1.1);
+        }
+    }
+
+    &-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        height: inherit;
+
+        transition: all ease .42s;
+
+        object-fit: cover;
+    }
+
+    .post-card-img-overlay {
+        position: relative;
+
+        display: flex;
+        height: 100%;
+        padding: 15px;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        .post-card-title {
+            font-size: 2.5em;
+            font-style: italic;
+            font-weight: 800;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            color: white;
+        }
+    }
+}
+
+/* ============================= */
+/*           Pagination          */
+/* ============================= */
+.pagination {
+    margin-bottom: 0;
+
+    .page-link {
+        /* fix line heihgt with font FoundersGrotesk */
+        padding-bottom: .187rem !important;
+
+        border-color: $primary;
+        border-radius: 0 !important;
+        background-color: transparent;
+
+        &:hover {
+            color: white;
+            background-color: $primary;
+        }
+    }
+}
+
+/* =============================== */
+/*          Media Queries          */
+/* =============================== */
+
+/* --------- From Tablet --------- */
+
+//@media screen and (min-width: 768px) {}
+
+/* -------- From small PC -------- */
+
+//@media screen and (min-width: 992px) {}
+
+/* -------- From large PC -------- */
+
+//@media screen and (min-width: 1200px) {}

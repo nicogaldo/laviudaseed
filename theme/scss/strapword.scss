@@ -1,0 +1,35 @@
+/* ==================================== */
+/*    strapword since v1.0 | Unicence   */
+/* ==================================== */
+
+@import "strapword/_bst-variables";
+@import "./bst-strapword";
+
+@import "strapword/_bp-variables";
+@import "buddypress/sass/buddypress";
+
+//@import "../../inc/buddypress/sass/primary-nav";
+//@import "../../inc/buddypress/sass/_nouveau_messages";
+//@import "../../inc/buddypress/sass/_nouveau_invites";
+
+
+@import "strapword/_base";
+@import "strapword/_blog";
+@import "strapword/_navbar";
+@import "strapword/_sliders";
+@import "strapword/_typography";
+@import "strapword/_code";
+@import "strapword/_lists";
+@import "strapword/_quotes";
+@import "strapword/_layout";
+@import "strapword/_groups";
+@import "strapword/_images-and-galleries";
+@import "strapword/_embeds";
+@import "strapword/_tables";
+@import "strapword/_comments";
+@import "strapword/_footer";
+
+@import "strapword/_buddypress";
+@import "strapword/_bp_forms";
+@import "strapword/_bp_profile";
+@import "strapword/_woocommerce";

@@ -1,0 +1,53 @@
+#comments,
+#reply-title {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.comment-list,
+.comment-list ul {
+    padding-left: 0;
+}
+
+.comment-list li {
+    padding: 1rem;
+}
+
+.comment-meta {
+    margin-bottom: 1rem;
+}
+
+.comment-list,
+.comment-list .children {
+    list-style-type: none;
+}
+
+.comment {
+    border-bottom: 1px solid rgba($light, .2);
+    
+    ul.children {
+        border-left: 1px solid rgba($light, .2);
+        border-bottom: 1px solid rgba($light, .2);
+        
+        li:last-of-type {
+            border-bottom: 0;
+        }
+
+    }
+}
+
+/* =============================== */
+/*          Media Queries          */
+/* =============================== */
+
+/* --------- From Tablet --------- */
+
+//@media screen and (min-width: 768px) {}
+
+/* -------- From small PC -------- */
+
+//@media screen and (min-width: 992px) {}
+
+/* -------- From large PC -------- */
+
+//@media screen and (min-width: 1200px) {}

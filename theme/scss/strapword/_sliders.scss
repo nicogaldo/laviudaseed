@@ -1,0 +1,264 @@
+/* ============================= */
+/*            Sliders            */
+/* ============================= */
+
+/* ---------- Defaults --------- */
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+}
+
+.swiper-xs {
+    max-height: 180px!important;
+
+    .swiper-slide {
+        img {
+            height: 180px!important;
+        }
+    }
+}
+
+.swiper-sm {
+    max-height: 450px!important;
+
+    .swiper-slide {
+        img {
+            height: 450px!important;
+        }
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    //top: calc(25% - 22px);
+    bottom: 0;
+
+    width: 60px;
+    height: 60px;
+
+    transition: all .6s ease;
+    //border-radius: 50%;
+    //background: rgba(255,255,255,.5);
+
+    &:after {
+        font-size: 2em;
+        font-weight: 900;
+
+        color: $dark;
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0)!important;
+    }
+}
+
+
+/* --------- pagination -------- */
+.swiper-pagination {
+    bottom: 15px!important;
+    left: 50%!important;
+
+    width: 80%!important;
+    margin: 0 auto;
+
+    transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 10px;
+
+    font-size: 12px;
+    line-height: 20px;
+
+    transition: width ease .3s;
+    text-align: center;
+
+    opacity: 1;
+    border-radius: 10px;
+    background: $primary;
+
+    border: 2px solid black;
+}
+
+.swiper-pagination-bullet-active {
+    width: 30px;
+    height: 10px;
+
+    //border: 1px solid $secondary;
+    background: $secondary;
+}
+
+/* ==================================== */
+/*         Button Slider caption        */
+/* ==================================== */
+.btn-caption {
+    box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, .34);
+
+    //@extend .btn-primary;
+}
+
+/* ============================= */
+/*         Slider Header         */
+/* ============================= */
+.swiper-home {
+    height: calc(100vh - 90px);
+    max-height: 420px;
+
+    .swiper-slide {
+        // &:before { //Add overlay to slide
+        //     @include overlay( .420, #48505B);
+        //     //mix-blend-mode: multiply;
+        // }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-height: 600px;
+
+            object-fit: cover;
+        }
+    }
+
+    .swiper-caption {
+        position: absolute;
+        //top: calc(50% + 45px); // for navbar transparent
+        top: calc(50%);
+        left: 50%;
+        z-index: 50;
+
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    // &.swiper-home {
+    //     .caption {
+    //         top: inherit;
+    //         bottom: 0;
+
+    //         transform: translate(-50%, 0);
+    //     }
+    // }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        &:after {
+            color: $white;
+        }
+
+        &:hover {
+            background: $white;
+
+            &:after {
+                color: $dark;
+            }
+        }
+    }
+}
+
+/* =============================== */
+/*            Destacados           */
+/* =============================== */
+.swiper-wrapper .swiper-slide.product {
+    li {
+        width: 100%!important;
+    }
+}
+
+/* =============================== */
+/*            Categorias           */
+/* =============================== */
+.swiper {
+    .swiper-button-next,
+    .swiper-button-prev {
+        transition: all ease .12s;
+
+        border: 2px solid transparent;
+        border-radius: 3px;
+
+        &:hover {
+            border-color: black;
+            border-right: 5px solid black;
+            border-bottom: 5px solid black;
+            background: $secondary!important;
+        }
+
+        &:active {
+            border-color: black;
+            border-top: 5px solid black;
+            border-right: 2px solid black;
+            border-bottom: 2px solid black;
+            border-left: 5px solid black;
+            background: $secondary!important;
+        }
+    }
+}
+
+/* =============================== */
+/*           Swiper modal          */
+/* =============================== */
+.img-slider-thumb {
+    width: 100px;
+    height: 100px;
+}
+
+.img-slider-modal {
+    width: 100%;
+    //height: 400px;
+
+    object-fit: cover;
+}
+
+/* =============================== */
+/*          Media Queries          */
+/* =============================== */
+
+/* --------- From Tablet --------- */
+
+@media only screen and (min-width: 768px) {
+    /* .swiper-header {
+        height: calc(100vh - 90px);
+        max-height: 420px;
+    } */
+
+    //.swiper-destacados { // , .swiper-id For arrow outside the box, change class name.
+    /* .swiper-modal {        
+        .swiper-button-next {
+            right: -60px!important;
+        }
+        .swiper-button-prev {
+            left: -60px!important;
+        }
+    } */
+
+    .swiper-destacados,
+    .swiper-cats {
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: inherit!important;
+
+            width: 40px;
+            height: 40px;
+
+            &:after {
+                font-size: 1.5em;
+
+                color: $primary;
+            }
+        }
+    }
+}
+
+/* -------- From small PC -------- */
+//@media only screen and (min-width: 992px) {}
+
+/* -------- From large PC -------- */
+@media screen and (min-width: 1200px) {
+    .swiper-header {
+        height: calc(100vh - 90px);
+        max-height: 600px;
+    }
+}

@@ -1,0 +1,52 @@
+/* ============================= */
+/*          Mis estilos          */
+/* ============================= */
+.img-cover {
+    width: max-content;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 60%;
+}
+
+.img-hover {
+    transition: all ease .3s;
+}
+
+.img-hover:hover {
+    transform: scale(1.1);
+}
+
+.img-invert {
+    filter: invert(1);
+}
+
+.img-gray {
+    filter: grayscale(1);
+}
+
+.img-brillo-0 {
+    filter: brightness(0);
+}
+
+.img-floating {
+	animation: float 2.8s ease-in-out infinite;
+
+	transform: translatey(0px);
+}
+
+/* =============================== */
+/*          Media Queries          */
+/* =============================== */
+
+/* --------- From Tablet --------- */
+
+//@media screen and (min-width: 768px) {}
+
+/* -------- From small PC -------- */
+
+//@media screen and (min-width: 992px) {}
+
+/* -------- From large PC -------- */
+
+//@media screen and (min-width: 1200px) {}
